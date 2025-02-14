@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+import os
 
 
 
@@ -136,11 +137,11 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=2),  # Extended for better UX
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),  # Allow refresh tokens for 7 days
-    'ROTATE_REFRESH_TOKENS': True,  # Rotate refresh tokens for better security
-    'BLACKLIST_AFTER_ROTATION': True,  # Blacklist old refresh tokens for safety
-    'UPDATE_LAST_LOGIN': True,  # Store last login timestamp
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=2),  
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1), 
+    'ROTATE_REFRESH_TOKENS': True,  
+    'BLACKLIST_AFTER_ROTATION': True, 
+    'UPDATE_LAST_LOGIN': True, 
 }
 
 
@@ -149,27 +150,22 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 
-# Static files configuration
-STATIC_URL = '/static/'  # Correct URL path for serving static files
+STATIC_URL = '/static/' 
 
-# Where Django will look for static files during development
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# Where collected static files will be stored in production
+
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# Using Whitenoise for serving static files in production
+
 STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
 
-# Add Whitenoise to middleware if using it
-MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add this line
-    # other middlewares
-]
+
 
 
 SECURE_SSL_REDIRECT = True
