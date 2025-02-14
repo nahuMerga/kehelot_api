@@ -149,14 +149,28 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 
-STATIC_URL = 'static/'
+# Static files configuration
+STATIC_URL = '/static/'  # Correct URL path for serving static files
+
+# Where Django will look for static files during development
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# Where collected static files will be stored in production
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Using Whitenoise for serving static files in production
 STORAGES = {
-    # ...
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+# Add Whitenoise to middleware if using it
+MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add this line
+    # other middlewares
+]
+
 
 SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
