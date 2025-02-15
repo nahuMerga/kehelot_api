@@ -1,1 +1,56 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+*.log
+*.pot
+*.mo
+*.swp
+
+# Django-specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+media/
+staticfiles/
 .env
+.venv/
+venv/
+env/
+.coverage
+*.coverage
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.tox/
+.nox/
+.coverage/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.coverage.*
+
+# VSCode
+.vscode/
+
+# JetBrains IDEs (PyCharm, etc.)
+.idea/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Virtualenv
+.env/
+.venv/
+venv/
+ENV/
