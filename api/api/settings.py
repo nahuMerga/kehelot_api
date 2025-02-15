@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-t#8f&57c$l9h!t(h=@(&*)$sj+&r9x@%_n9p4+04ins!((2nc2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["kehelot-backend.onrender.com", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["kehelot-backend.onrender.com", "127.0.0.1", "localhost", ".vercel.app"]
 
 
 # Application definition
