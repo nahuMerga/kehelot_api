@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 set -o errexit  # Exit on error
-set -o pipefail  # Exit on first failed command in a pipeline
-set -o nounset  # Prevent using unset variables
-set -o xtrace  # Debugging: Print commands before running them
+
 
 echo "🚀 Starting deployment..."
 
