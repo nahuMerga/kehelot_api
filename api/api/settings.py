@@ -105,7 +105,6 @@ DATABASES = {
         'USER': 'nahomer',
         'PASSWORD': '11ssdUpJtQCdF2DgDE2g5d66AHRwPjPe',
         'HOST': 'dpg-cunlhtin91rc73dq2f60-a.oregon-postgres.render.com',
-        'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',
         },
