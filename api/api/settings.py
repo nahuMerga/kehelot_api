@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t#8f&57c$l9h!t(h=@(&*)$sj+&r9x@%_n9p4+04ins!((2nc2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["kehelot-backend.onrender.com", "127.0.0.1", "localhost", ".vercel.app"]
 
