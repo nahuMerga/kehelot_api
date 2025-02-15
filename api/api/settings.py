@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-t#8f&57c$l9h!t(h=@(&*)$sj+&r9x@%_n9p4+04ins!((2nc2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["kehelot-backend.onrender.com", "127.0.0.1", "localhost", ".vercel.app"]
+ALLOWED_HOSTS = ["kehelot-backend.onrender.com", "127.0.0.1", "localhost", ".vercel.app", "'dpg-cunlhtin91rc73dq2f60-a.oregon-postgres.render.com'"]
 
 
 # Application definition
@@ -100,14 +100,18 @@ WSGI_APPLICATION = 'api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Make sure this is set
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'kehelot_db',
         'USER': 'nahomer',
         'PASSWORD': '11ssdUpJtQCdF2DgDE2g5d66AHRwPjPe',
-        'HOST': 'dpg-cunlhtin91rc73dq2f60-a',
-        'PORT': 5432,
+        'HOST': 'dpg-cunlhtin91rc73dq2f60-a.oregon-postgres.render.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
     }
 }
+
 
 
 
