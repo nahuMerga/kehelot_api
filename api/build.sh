@@ -15,7 +15,7 @@ pip install -r requirements.txt
 python manage.py migrate --no-input
 
 # Collect static files
-python manage.py collectstatic --no-input
+# python manage.py collectstatic --no-input
 
 # Start Gunicorn server using the dynamic PORT environment variable
 python manage.py runserver
