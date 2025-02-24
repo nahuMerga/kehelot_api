@@ -99,16 +99,11 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'kehelot_db',
-        'USER': 'nahomer',
-        'PASSWORD': '11ssdUpJtQCdF2DgDE2g5d66AHRwPjPe',
-        'HOST': 'dpg-cunlhtin91rc73dq2f60-a.oregon-postgres.render.com',
-        'OPTIONS': {
-            'sslmode': 'require',
-        },
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),  # Load database URL from env
+        conn_max_age=600,  # Keeps DB connections open for performance
+        ssl_require=True   # Enforces SSL connection
+    )
 }
 
 
